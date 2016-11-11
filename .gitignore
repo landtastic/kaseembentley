@@ -1,6 +1,7 @@
 backup/*
 bin/*
 cache/*
+sitecake/*
 images/*
 logs/*
 src_files/*
