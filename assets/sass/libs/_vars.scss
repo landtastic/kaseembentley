@@ -1,0 +1,77 @@
+// Misc.
+	$misc: (
+		z-index-base:		10000,
+		main-layout:		(
+			default:		(
+				rows:		2,
+				columns:	4,
+				pad:		0.5,
+				minHeight:	20em
+			),
+			xlarge:			(
+				rows:		2,
+				columns:	3,
+				pad:		0.5,
+				minHeight:	20em
+			),
+			large:			(
+				rows:		2,
+				columns:	2,
+				pad:		0.5,
+				minHeight:	20em
+			),
+			medium:			(
+				rows:		3,
+				columns:	2,
+				pad:		0.5,
+				minHeight:	18em
+			),
+			xsmall:			(
+				rows:		2,
+				columns:	1,
+				pad:		0.5,
+				minHeight:	18em
+			)
+		)
+	);
+// Duration.
+	$duration: (
+		nav:				0.5s,
+		transition:			0.2s,
+		header:				1s,
+		panel:				0.5s,
+		modal:				0.5s,
+		thumb:				0.15s
+	);
+
+// Size.
+	$size: (
+		border-radius:		8px,
+		element-height:		2.75em,
+		element-margin:		2em,
+		header:				4em
+	);
+
+// Font.
+	$font: (
+		family:				('Raleway', Helvetica, sans-serif),
+		family-fixed:		('Courier New', monospace),
+		family-heading:		('Montserrat', sans-serif),
+		weight:				300,
+		weight-bold:		500,
+		weight-heading:		700,
+		letter-spacing:		0.05em,
+		letter-spacing-alt:	0.25em
+	);
+
+// Palette.
+	$palette: (
+		bg:					#f4f4f4,
+		bg-alt:				#111,
+		fg:					#ccc,
+		fg-bold:			#fff,
+		fg-light:			#bbb,
+		border:				#cccccc,
+		border-bg:			rgba(144,144,144,0.075),
+		accent:				#bb9d51
+	);
