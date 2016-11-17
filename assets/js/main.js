@@ -222,15 +222,17 @@
 					$window.on('--refresh', function() {
 
 						// Fix min-height/flexbox.
-							$wrapper.css('height', 'auto');
+						//	$wrapper.css('height', 'auto');
 
 							window.setTimeout(function() {
 
 								var h = $wrapper.height(),
 									wh = $window.height();
-
+									/*
+console.log(h);
 								if (h < wh)
 									$wrapper.css('height', '100vh');
+								*/
 
 							}, 0);
 

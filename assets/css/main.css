@@ -1,5 +1,5 @@
 @import url(font-awesome.min.css);
-@import url("https://fonts.googleapis.com/css?family=Raleway|Montserrat:700|Great+Vibes");
+@import url("https://fonts.googleapis.com/css?family=Raleway|Montserrat:700|Playfair+Display:400,900");
 /*
 	Indivisible by Pixelarity
 	pixelarity.com | hello@pixelarity.com
@@ -64,7 +64,7 @@ body {
 }
 
 body {
-  background: #f4f4f4;
+  background: #0e0e0e;
 }
 
 body.is-loading *, body.is-loading *:before, body.is-loading *:after {
@@ -111,7 +111,7 @@ a {
 }
 
 a:hover {
-  color: #bb9d51 !important;
+  color: #ddbc6b !important;
   border-bottom-color: transparent;
 }
 
@@ -130,14 +130,16 @@ p {
 
 h1, h2, h3, h4, h5, h6 {
   color: #fff;
-  color: #bb9d51;
+  color: #ddbc6b;
   font-family: "Montserrat", sans-serif;
   /*font-weight: _font(weight-heading);*/
   line-height: 1.5;
-  margin: 0 0 1em 0;
-  /*text-transform: uppercase;
+  /*margin: 0 0 (_size(element-margin) * 0.5) 0;
 		letter-spacing: _font(letter-spacing-alt);*/
-  font-family: 'Great Vibes';
+  margin: 0 0 0.5em 0;
+  font-family: "Playfair Display";
+  font-weight: 900 !important;
+  text-transform: uppercase !important;
 }
 
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
@@ -150,9 +152,20 @@ h1 {
   letter-spacing: initial;
   font-weight: initial;
   font-size: 2em;
-  font-size: 6em !important;
-  font-size: 3em;
-  line-height: 1.1;
+  font-size: 5em !important;
+  line-height: 0.8;
+  /*
+		background-color: _palette(accent);
+		color: transparent;
+		text-shadow: 0px 2px 3px rgba(255,255,255,0.2);
+		-webkit-background-clip: text;
+		-moz-background-clip: text;
+		background-clip: text;
+*/
+}
+
+h1::first-letter {
+  font-size: 110%;
 }
 
 h2 {
@@ -384,8 +397,8 @@ input[type="email"]:focus,
 input[type="tel"]:focus,
 select:focus,
 textarea:focus {
-  border-color: #bb9d51;
-  box-shadow: 0 0 0 1px #bb9d51;
+  border-color: #ddbc6b;
+  box-shadow: 0 0 0 1px #ddbc6b;
 }
 
 .select-wrapper {
@@ -498,8 +511,8 @@ input[type="radio"]:checked + label:before {
 
 input[type="checkbox"]:focus + label:before,
 input[type="radio"]:focus + label:before {
-  border-color: #bb9d51;
-  box-shadow: 0 0 0 1px #bb9d51;
+  border-color: #ddbc6b;
+  box-shadow: 0 0 0 1px #ddbc6b;
 }
 
 input[type="checkbox"] + label:before {
@@ -560,6 +573,7 @@ input[type="radio"] + label:before {
   text-decoration: none;
   border-bottom: none;
   position: relative;
+  color: #ddbc6b;
 }
 
 .icon:before {
@@ -1066,7 +1080,7 @@ button.back:after,
   -webkit-transition: opacity 0.2s ease;
   -ms-transition: opacity 0.2s ease;
   transition: opacity 0.2s ease;
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='112px' height='96px' viewBox='0 0 112 96' zoomAndPan='disable'%3E%3Cstyle%3Eline %7B stroke: %23bb9d51%3B stroke-width: 4px %7D%3C/style%3E%3Cline x1='0' y1='46' x2='112' y2='46' /%3E%3Cline x1='24' y1='22' x2='0' y2='46' /%3E%3Cline x1='24' y1='70' x2='0' y2='46' /%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='112px' height='96px' viewBox='0 0 112 96' zoomAndPan='disable'%3E%3Cstyle%3Eline %7B stroke: %23ddbc6b%3B stroke-width: 4px %7D%3C/style%3E%3Cline x1='0' y1='46' x2='112' y2='46' /%3E%3Cline x1='24' y1='22' x2='0' y2='46' /%3E%3Cline x1='24' y1='70' x2='0' y2='46' /%3E%3C/svg%3E");
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -1140,8 +1154,8 @@ button:hover,
 button.active,
 .button:hover,
 .button.active {
-  box-shadow: inset 0 0 0 1px #bb9d51;
-  color: #bb9d51 !important;
+  box-shadow: inset 0 0 0 1px #ddbc6b;
+  color: #ddbc6b !important;
 }
 
 input[type="submit"]:active, input[type="submit"].active,
@@ -1153,7 +1167,7 @@ button:active,
 button.active,
 .button:active,
 .button.active {
-  background-color: rgba(187, 157, 81, 0.05);
+  background-color: rgba(221, 188, 107, 0.05);
 }
 
 input[type="submit"].special,
@@ -1163,7 +1177,7 @@ button.special,
 .button.special {
   box-shadow: none;
   background-color: #fff;
-  color: #f4f4f4 !important;
+  color: #0e0e0e !important;
 }
 
 input[type="submit"].special:hover,
@@ -1171,7 +1185,7 @@ input[type="reset"].special:hover,
 input[type="button"].special:hover,
 button.special:hover,
 .button.special:hover {
-  background-color: #bb9d51;
+  background-color: #ddbc6b;
 }
 
 input[type="submit"].special:active,
@@ -1179,7 +1193,7 @@ input[type="reset"].special:active,
 input[type="button"].special:active,
 button.special:active,
 .button.special:active {
-  background-color: #9c813d;
+  background-color: #d3a942;
 }
 
 input[type="submit"].disabled, input[type="submit"]:disabled,
@@ -1389,32 +1403,12 @@ body.touch .poptrox-popup .nav-next {
   -webkit-justify-content: center;
   -ms-justify-content: center;
   justify-content: center;
-  min-height: 100vh;
-  padding: 3em;
   width: 100%;
   -moz-transition: -moz-filter 0.5s ease, -webkit-filter 0.5s ease, -ms-filter 0.5s ease, -moz-filter 0.5s ease;
   -webkit-transition: -moz-filter 0.5s ease, -webkit-filter 0.5s ease, -ms-filter 0.5s ease, -webkit-filter 0.5s ease;
   -ms-transition: -moz-filter 0.5s ease, -webkit-filter 0.5s ease, -ms-filter 0.5s ease, -ms-filter 0.5s ease;
   transition: -moz-filter 0.5s ease, -webkit-filter 0.5s ease, -ms-filter 0.5s ease, filter 0.5s ease;
   position: relative;
-}
-
-@media screen and (max-width: 1280px) {
-  #wrapper {
-    padding: 1.5em;
-  }
-}
-
-@media screen and (max-width: 980px) {
-  #wrapper {
-    padding: 2em;
-  }
-}
-
-@media screen and (max-width: 736px) {
-  #wrapper {
-    padding: 1em;
-  }
 }
 
 #wrapper:after {
@@ -1559,8 +1553,7 @@ body.loading #wrapper:before {
   -webkit-transition: opacity 0.5s ease, -webkit-transform 0.5s ease;
   -ms-transition: opacity 0.5s ease, -ms-transform 0.5s ease;
   transition: opacity 0.5s ease, transform 0.5s ease;
-  max-width: calc(100vw - 6em);
-  width: 86em;
+  width: 100%;
 }
 
 .panel > .image {
@@ -1568,10 +1561,10 @@ body.loading #wrapper:before {
   -webkit-transition: -webkit-transform 0.5s ease;
   -ms-transition: -ms-transform 0.5s ease;
   transition: transform 0.5s ease;
-  background-color: #777;
+  background-color: #111;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
   border-radius: 0;
   min-height: 50em;
   width: 50%;
@@ -1605,6 +1598,7 @@ body.loading #wrapper:before {
   -ms-transition: -ms-transform 0.5s ease;
   transition: transform 0.5s ease;
   background-color: #111;
+  background: url(../../images/dark_leather.png) !important;
   padding: 3em;
   width: 50%;
 }
@@ -1678,18 +1672,12 @@ body.loading #wrapper:before {
 }
 
 @media screen and (max-width: 1680px) {
-  .panel {
-    width: 75em;
-  }
   .panel > .image {
     min-height: 45em;
   }
 }
 
 @media screen and (max-width: 1280px) {
-  .panel {
-    max-width: calc(100vw - 3em);
-  }
   .panel > .image {
     min-height: 35em;
   }
@@ -1732,10 +1720,6 @@ body.loading #wrapper:before {
 }
 
 @media screen and (max-width: 736px) {
-  .panel {
-    max-width: calc(100vw - 2em);
-    width: 30em;
-  }
   .panel > .image {
     min-height: 18em;
     max-height: 30vh;

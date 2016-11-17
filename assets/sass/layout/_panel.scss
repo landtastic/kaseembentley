@@ -14,15 +14,16 @@
 			'opacity 0.5s ease',
 			'transform 0.5s ease'
 		));
-		max-width: calc(100vw - #{_size(element-margin) * 1.5 * 2});
-		width: 86em;
+		//max-width: calc(100vw - #{_size(element-margin) * 1.5 * 2});
+		//width: 86em;
+		width: 100%;
 
 		> .image {
 			@include vendor('transition', 'transform 0.5s ease');
-			background-color: #777;
+			background-color: #111;
 			background-position: center;
 			background-repeat: no-repeat;
-			background-size: cover;
+			background-size: contain;
 			border-radius: 0;
 			min-height: 50em;
 			width: 50%;
@@ -44,6 +45,7 @@
 			@include vendor('justify-content', 'center');
 			@include vendor('transition', 'transform 0.5s ease');
 			background-color: _palette(bg-alt);
+			background: url(../../images/dark_leather.png)!important;
 			padding: 3em;
 			width: 50%;
 		}
@@ -102,7 +104,7 @@
 		}
 
 		@include breakpoint(xlarge) {
-			width: 75em;
+			//width: 75em;
 
 			> .image {
 				min-height: 45em;
@@ -110,7 +112,7 @@
 		}
 
 		@include breakpoint(large) {
-			max-width: calc(100vw - #{_size(element-margin) * 0.75 * 2});
+			//max-width: calc(100vw - #{_size(element-margin) * 0.75 * 2});
 
 			> .image {
 				min-height: 35em;
@@ -151,8 +153,8 @@
 		}
 
 		@include breakpoint(small) {
-			max-width: calc(100vw - #{_size(element-margin) * 0.5 * 2});
-			width: 30em;
+			//max-width: calc(100vw - #{_size(element-margin) * 0.5 * 2});
+			//width: 30em;
 
 			> .image {
 				min-height: 18em;
