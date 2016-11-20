@@ -173,7 +173,7 @@
 											.addClass('inactive')
 											.hide();
 											$("#home").show();
-											console.log('what');
+											//console.log('what');
 											$('#home').removeClass('inactive');
 											$('#home').addClass('active');
 										}

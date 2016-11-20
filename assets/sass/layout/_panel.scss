@@ -23,7 +23,7 @@
 			background-color: #111;
 			background-position: center;
 			background-repeat: no-repeat;
-			background-size: contain;
+			/*background-size: contain;*/
 			border-radius: 0;
 			min-height: 50em;
 			width: 50%;
@@ -123,12 +123,21 @@
 			}
 		}
 
+		@include breakpoint(xlarge) {
+			.contact-frame-left, .contact-frame-right {height:70%;}
+		}
+
 		@include breakpoint(medium) {
+
+			.contact-frame-left, .contact-frame-right {height:70%;}
+
 			@include vendor('flex-direction', 'column');
 
 			> .image {
 				min-height: 60vh;
 				width: 100%;
+				background-size: cover;
+				background-position: 50% 36%!important;
 			}
 
 			> .content {
@@ -155,9 +164,9 @@
 		@include breakpoint(small) {
 			//max-width: calc(100vw - #{_size(element-margin) * 0.5 * 2});
 			//width: 30em;
-
+			.contact-frame-left, .contact-frame-right {display:none;}
 			> .image {
-				min-height: 18em;
+				min-height: 29em;
 				max-height: 30vh;
 			}
 
@@ -184,7 +193,8 @@
 
 		@include breakpoint(xxsmall) {
 			> .image {
-				min-height: 15em;
+				/*min-height: 15em;*/
+    			min-height: 28em;
 			}
 		}
 

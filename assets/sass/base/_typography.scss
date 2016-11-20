@@ -52,7 +52,7 @@
 	}
 
 	h1, h2, h3, h4, h5, h6 {
-		color: _palette(fg-bold);
+		/*color: _palette(fg-bold);*/
 		color: _palette(accent);
 		font-family: _font(family-heading);
 		/*font-weight: _font(weight-heading);*/
@@ -69,15 +69,15 @@
 		font-family: "Playfair Display";
 		font-weight: 900!important;
 		text-transform: uppercase!important;
+		text-shadow: -1px -1px 0px rgba(255,255,255,0.3), 1px 1px 0px rgba(0,0,0,0.8);
+		
 	}
 
 	h1 {
 		text-transform: initial;
 		letter-spacing: initial;
 		font-weight: initial;
-		font-size: 2em;
-		font-size: 5em!important;
-		
+		font-size: 5em;
 		line-height: 0.8;
 /*
 		background-color: _palette(accent);
@@ -88,13 +88,14 @@
 		background-clip: text;
 */
 	}
-	h1::first-letter { 
-	    font-size: 110%;
+	h1::first-letter,h2::first-letter { 
+	    font-size: 115%;
 	}
 
 	h2 {
-		font-size: 1.75em;
-		font-size: 6em!important;
+		/*font-size: 4.0em;*/
+		font-size: 50px;
+		margin: 0 0 0.1em 0;
 	}
 
 	h3 {
@@ -116,7 +117,7 @@
 
 	@include breakpoint(small) {
 		h1 {
-			font-size: 1.5em;
+			font-size: 3.5em;
 		}
 
 		h2 {

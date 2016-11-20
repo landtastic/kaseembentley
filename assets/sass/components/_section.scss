@@ -11,6 +11,9 @@
 			text-align: center;
 		}
 	}
+	article {
+		min-height: 900px;
+	}
 
 	header {
 		margin: (_size(element-margin) * 1.5) 0;
