@@ -70,7 +70,7 @@
 		font-weight: 900!important;
 		text-transform: uppercase!important;
 		text-shadow: -1px -1px 0px rgba(255,255,255,0.3), 1px 1px 0px rgba(0,0,0,0.8);
-		
+
 	}
 
 	h1 {
@@ -88,7 +88,7 @@
 		background-clip: text;
 */
 	}
-	h1::first-letter,h2::first-letter { 
+	h1::first-letter,h2::first-letter,h1 div::first-letter { 
 	    font-size: 115%;
 	}
 

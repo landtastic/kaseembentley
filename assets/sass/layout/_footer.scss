@@ -12,12 +12,15 @@
 		opacity: 1.0;
 		text-align: center;
 
-		.copyright {
+		.copyright, .instagram-header {
 			color: _palette(fg-light);
 			font-size: 0.8em;
 			letter-spacing: _font(letter-spacing-alt);
 			margin-bottom: 0;
 			text-transform: uppercase;
+		}
+		.copyright {
+			 padding: 25px 0px;
 		}
 
 		&.inactive {

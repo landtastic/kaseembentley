@@ -66,7 +66,7 @@
 						console.log(state);
 					}
 				});
-				
+
 				window.addEventListener('popstate', function(event) {
 					console.log($(window.location.hash) + 'popstate');
 				}, false);
@@ -121,7 +121,7 @@
 						event.preventDefault();
 						event.stopPropagation();
 					*/
-					
+
 				//window.history.pushState({state: new Date().getTime()}, '', $this.attr('href'));
 					//history.pushState({}, '', $(this).attr("href"));
 					//console.log($(this).attr("href"));
@@ -129,7 +129,7 @@
 					window.onpopstate = function(e) {
 						//alert($panel.length);//id = window.location.hash;
 						//console.log($panel);
-											
+
 					// Locked? Bail.
 						if (locked)
 							return;
@@ -372,7 +372,7 @@ var $contactForm = $('#contact-form');
 $contactForm.submit(function(e) {
 	e.preventDefault();
 	$.ajax({
-		url: '//formspree.io/land@l4nd.com',
+		url: '//formspree.io/kaseembentley@yahoo.com',
 		method: 'POST',
 		data: $(this).serialize(),
 		dataType: 'json',
@@ -391,3 +391,18 @@ $contactForm.submit(function(e) {
 });
 
 })(jQuery);
+
+$(document).ready(function() {
+	var feed = new Instafeed({
+			get: 'user',
+			limit: 14,
+			resolution: 'low_resolution',
+      // userId: 313885121,
+			userId: 144757963,
+			clientId: 'e2c27e0857264304af0b9ca7354b79db',
+			accessToken: '144757963.e2c27e0.4d4b9ddab8c849f2921121a09401ddc3',
+			// template: '<a href="{{link}}"><img src="{{image}}" /><div>{{caption}}</div></a>'
+			template: '<div class="wrap"><a href="{{link}}"><img src="{{image}}"/><div class="caption">{{caption}}</div></a></div>'
+	});
+	feed.run();
+});

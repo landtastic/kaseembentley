@@ -135,10 +135,9 @@
 			@include vendor('flex-direction', 'column');
 
 			> .image {
-				min-height: 60vh;
+				height: 100%;
 				width: 100%;
-				background-size: cover;
-				background-position: 50% 36%!important;
+				background-size: contain;
 			}
 
 			> .content {
@@ -167,7 +166,7 @@
 			//width: 30em;
 			.contact-frame-left, .contact-frame-right {display:none;}
 			> .image {
-				min-height: 29em;
+    		min-height: 23em;
 				max-height: 30vh;
 			}
 

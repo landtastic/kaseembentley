@@ -4,7 +4,8 @@ cache/*
 sitecake/*
 sitecake-temp/*
 sitecake-backup/*
-images/*
+node_modules/*
+psds/*
 logs/*
 src_files/*
 system/*
