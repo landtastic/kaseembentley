@@ -185,12 +185,12 @@
 									// Show target panel.
 										//$panel.show();
 										var hashVal = window.location.hash ? window.location.hash : '#home';
-										console.log(hashVal);
-										if (hashVal == '#home') imageRotate();
+
+										// if (hashVal == '#home') imageRotate();
 
 										if(window.location.hash) {
 											$(window.location.hash).show();
-											clearTimeout(landsTimeout);
+											// clearTimeout(landsTimeout);
 										} else {
 											// Deactivate + hide all but the first panel.
 											$panels.not($panels.first())
