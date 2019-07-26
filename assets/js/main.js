@@ -82,6 +82,24 @@
 					//$panels.
 					//$this.addClass('active');
 
+				var landsTimeout;
+
+				function imageRotate() {
+					clearTimeout(landsTimeout);
+					let $image = $("#home").children('.image'),
+						$img = $image.find('img');
+					let imgArray = $img.toArray();
+					$img.each(function(index) {
+						landsTimeout = setTimeout(function(){
+							$image.css('background-image', 'url(' + imgArray[index].src + ')');
+							if ((index + 1) === $img.length) {
+								setTimeout(function() {
+									imageRotate() }, 4000)
+							} else { index++; }
+						}, 4000*index)
+					});
+				}
+
 			// Fix images.
 				$panels.each(function() {
 
@@ -92,6 +110,11 @@
 
 					// Set background.
 						$image.css('background-image', 'url(' + $img.attr('src') + ')');
+						if ($img.length > 1) {
+							// var rotate = setInterval(imageRotate($image,$img), 4000);
+							$image.css('-webkit-transition','background-image 1s ease-in-out','transition','background-image 1s ease-in-out;');
+							imageRotate();
+						}
 
 					// Set position (if set).
 						if (position)
@@ -162,11 +185,12 @@
 									// Show target panel.
 										//$panel.show();
 										var hashVal = window.location.hash ? window.location.hash : '#home';
-
-										//console.log(hashVal);
+										console.log(hashVal);
+										if (hashVal == '#home') imageRotate();
 
 										if(window.location.hash) {
 											$(window.location.hash).show();
+											clearTimeout(landsTimeout);
 										} else {
 											// Deactivate + hide all but the first panel.
 											$panels.not($panels.first())
@@ -392,17 +416,17 @@ $contactForm.submit(function(e) {
 
 })(jQuery);
 
-$(document).ready(function() {
-	var feed = new Instafeed({
-			get: 'user',
-			limit: 14,
-			resolution: 'low_resolution',
-      // userId: 313885121,
-			userId: 144757963,
-			clientId: 'e2c27e0857264304af0b9ca7354b79db',
-			accessToken: '144757963.e2c27e0.4d4b9ddab8c849f2921121a09401ddc3',
-			// template: '<a href="{{link}}"><img src="{{image}}" /><div>{{caption}}</div></a>'
-			template: '<div class="wrap"><a href="{{link}}"><img src="{{image}}"/><div class="caption">{{caption}}</div></a></div>'
-	});
-	feed.run();
-});
+// $(document).ready(function() {
+// 	var feed = new Instafeed({
+// 			get: 'user',
+// 			limit: 14,
+// 			resolution: 'low_resolution',
+//       // userId: 313885121,
+// 			userId: 144757963,
+// 			clientId: 'e2c27e0857264304af0b9ca7354b79db',
+// 			accessToken: '144757963.e2c27e0.4d4b9ddab8c849f2921121a09401ddc3',
+// 			// template: '<a href="{{link}}"><img src="{{image}}" /><div>{{caption}}</div></a>'
+// 			template: '<div class="wrap"><a href="{{link}}"><img src="{{image}}"/><div class="caption">{{caption}}</div></a></div>'
+// 	});
+// 	feed.run();
+// });
