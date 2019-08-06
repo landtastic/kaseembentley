@@ -432,12 +432,12 @@ $contactForm.submit(function(e) {
 // });
 $(document).ready(function() {
 	$.getJSON("https://spreadsheets.google.com/feeds/list/1osPmH5ZOEkF9gFUvNquEYvgzl2fqvqe6ylQ1Xsu9srM/od6/public/values?alt=json", function(data) {
- 	var entry = data.feed.entry;
-	 $(entry).each(function(){
-		 // Column names are name, age, etc.
-		 console.log('<div><p><b>'+this.gsx$date.$t+'</b></p><p>'+this.gsx$venue.$t+'</p><p>'+this.gsx$address.$t+'</p><p>'+this.gsx$url.$t+'</p>');
+	 	var entry = data.feed.entry;
+		if (entry === undefined || entry.length < 1) $('#shows label').hide();
+		$(entry).each(function(){
 		 $('#shows').append('<div><p><b>'+this.gsx$date.$t+'</b></p><p>'+this.gsx$venue.$t+'</p><p>'+this.gsx$address.$t+'</p><p><a href="'+this.gsx$url.$t+'" target="_blank">'+this.gsx$url.$t+'</a></p><br><br>');
-	 });
-
-	});
+		});
+ 	}).fail(function() {
+	 $('#shows label').hide();
+ 	});
 });
