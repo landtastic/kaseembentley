@@ -19,7 +19,7 @@
   },
   "homepage": "https://github.com/landtastic/kaseembentley#readme",
   "dependencies": {
-    "http-server": "^0.11.1",
+    "http-server": "^0.11.2",
     "node-sass": "^4.12.0",
     "sass": "^1.22.2"
   },
